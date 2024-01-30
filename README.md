@@ -8,15 +8,7 @@ sed -i "s/focalboard.tuservidor.es/el_fqdn_que_quieras/g" .env
 mkdir -p data files
 ```
 
-A la hora de levantar el servicio dependerá del proxy inverso que hayas seleccionado. Si has elegido Caddy, simplemente,
-
-```
-docker-compose -f docker-compose.yml -f docker-compose.caddy.yml up -d
-docker-compose logs -f
-```
-
-Mientras que si has elegido Traefik,
-
+## Up service with Traefik
 ```
 docker-compose -f docker-compose.yml -f docker-compose.traefik.yml up -d
 docker-compose logs -f
